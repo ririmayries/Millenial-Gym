@@ -31,14 +31,14 @@ class AuthController {
         return this.login(...arguments)
     }
 
-    async login({request, auth}) {
-        // get requets data
+    async login ({request, auth}) {
+        // get request data
         const {email, password} = request.post()
 
         // define rules for validation
         const rules = {
             email: 'required|email',
-            password: 'required|min:8',
+            password: 'required|min:8'
         }
 
         // validate request data
@@ -47,7 +47,7 @@ class AuthController {
             return validation.messages()
         }
 
-        // get token if login success
+        // get token if login success 
         const token = await auth.attempt(email, password)
 
         return token
