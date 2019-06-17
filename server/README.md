@@ -1,31 +1,32 @@
-# Adonis fullstack application
+# Millenial Gym
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+## Introduction
+Ini adalah percobaan pertama kali saya membuat API dengan menggunakan AdonisJs. AdonisJs adalah framework MVC untuk Node.js dan dianggap sebagai Laravel untuk Node.js.
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+Konsep API ini yaitu memungkinkan pemesanan kelas gym secara online diberbagai studio tanpa harus menjadi member dari studio tersebut tapi cukup menjadi member dari Millenial Gym. Sehingga dengan 1 membership user bisa mencoba berbagai kelas gym dari berbagai studio gym yang tersedia.  
+
+Konsep ini bukanlah hal yang baru. Salah satu contohnya adalah classpass.com dan API ini adalah versi sederhana dari konsep tersebut. Sebelumnya saya pernah membuat API dengan konsep seperti ini dengan menggunakan Laravel. Kali ini saya mencoba membuat ulang dengan menggunakan AdonisJS.  
 
 ## Setup
 
-Use the adonis command to install the blueprint
+Sebelum menginstall API ini pastikan system sudah menginstall AdonisJs >= v4.1  
+
+Setelah di clone jangan lupa untuk menjalankan command berikut ini
 
 ```bash
-adonis new yardstick
+npm install
 ```
 
-or manually clone the repo and then run `npm install`.
+Sesuaikan config yang ada di file .env
 
+Kemudian jalankan command migration
 
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
+```bash
 adonis migration:run
+```
+
+Dan terakhir jalankan command berikut ini untuk memulai server
+
+```bash
+adonis serve --dev
 ```
